@@ -315,6 +315,10 @@ func (d *ResourceData) State() *terraform.InstanceState {
 
 	mapW := &MapFieldWriter{Schema: d.schema}
 	if err := mapW.WriteField(nil, rawMap); err != nil {
+		if d.panicOnError {
+			panic(err)
+		}
+
 		return nil
 	}
 
