@@ -187,9 +187,10 @@ func (d *ResourceData) Set(key string, value interface{}) error {
 	}
 
 	err := d.setWriter.WriteField(strings.Split(key, "."), value)
-	if err != nil && d.panicOnError {
-		panic(err)
-	}
+	// TODO: uncomment this once [pulumi/pulumi-cloud#56] is solved
+	//if err != nil && d.panicOnError {
+	//	panic(err)
+	//}
 	return err
 }
 
