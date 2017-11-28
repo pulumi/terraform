@@ -1,6 +1,6 @@
 [[constraint]]
   name = "cloud.google.com/go"
-  revision = "81b7822b1e798e8f17bf64b59512a5be4097e966"
+  revision = "eaddaf6dd7ee35fd3c2420c8d27478db176b0485"
 
 [[constraint]]
   name = "github.com/Azure/azure-sdk-for-go"
@@ -20,11 +20,11 @@
 
 [[constraint]]
   name = "github.com/Unknwon/com"
-  version = "v1"
+  revision = "28b053d5a2923b87ce8c5a08f3af779894a72758"
 
 [[constraint]]
   name = "github.com/agext/levenshtein"
-  version = "v1.2.1"
+  revision = "5f10fee965225ac1eecdc234c09daf5cd9e7f7b6"
 
 [[constraint]]
   name = "github.com/agl/ed25519"
@@ -76,15 +76,11 @@
 
 [[constraint]]
   name = "github.com/coreos/etcd"
-  revision = "6930e471ed55ef89641a658b9fcb777295d5055b"
-
-[[constraint]]
-  name = "github.com/coreos/go-semver"
-  version = "v0.2.0"
+  revision = "80aa810309d4d261c7cb56c2650641ff52420bfa"
 
 [[constraint]]
   name = "github.com/davecgh/go-spew"
-  version = "v1.1.0"
+  revision = "346938d642f2ec3594ed81d874461961cd0faa76"
 
 [[constraint]]
   name = "github.com/dgrijalva/jwt-go"
@@ -92,19 +88,23 @@
 
 [[constraint]]
   name = "github.com/dylanmei/iso8601"
-  version = "v0.1.0"
+  revision = "2075bf119b58e5576c6ed9f867b8f3d17f2e54d4"
 
 [[constraint]]
   name = "github.com/dylanmei/winrmtest"
   revision = "c2fbb09e6c084fe3ebe95fce0f1cc5297c152026"
 
 [[constraint]]
+  name = "github.com/fsouza/go-dockerclient"
+  revision = "1d4f4ae73768d3ca16a6fb964694f58dc5eba601"
+
+[[constraint]]
   name = "github.com/go-ini/ini"
-  version = "v1.23.1"
+  revision = "766e555c68dc8bda90d197ee8946c37519c19409"
 
 [[constraint]]
   name = "github.com/golang/protobuf"
-  revision = "8ee79997227bf9b34611aee7946ae64735e6fd93"
+  revision = "130e6b02ab059e7b717a096f397c5b60111cae74"
 
 [[constraint]]
   name = "github.com/googleapis/gax-go"
@@ -112,7 +112,7 @@
 
 [[constraint]]
   name = "github.com/gophercloud/gophercloud"
-  revision = "c5dfe1bc7b150a98b1578bb32f7c138ff9568f1d"
+  revision = "3027adb1ce72bc52b87b2decccc7852574b90031"
 
 [[constraint]]
   name = "github.com/hashicorp/atlas-go"
@@ -120,7 +120,7 @@
 
 [[constraint]]
   name = "github.com/hashicorp/consul"
-  revision = "610f3c86a089817b5bd5729a3b8c2db33a9ae2b0"
+  branch = "master"
 
 [[constraint]]
   name = "github.com/hashicorp/errwrap"
@@ -136,7 +136,7 @@
 
 [[constraint]]
   name = "github.com/hashicorp/go-getter"
-  revision = "a686900cb3753aa644dc4812be91ceaf9fdd3b98"
+  branch = "master"
 
 [[constraint]]
   name = "github.com/hashicorp/go-hclog"
@@ -187,10 +187,6 @@
   revision = "e4ec8cc423bbe20d26584b96efbeb9102e16d05f"
 
 [[constraint]]
-  name = "github.com/hashicorp/terraform"
-  version = "v0.11.0"
-
-[[constraint]]
   name = "github.com/hashicorp/vault"
   revision = "9a60bf2a50e4dd1ba4b929a3ccf8072435cbdd0a"
 
@@ -203,8 +199,24 @@
   revision = "3d48364a137a7847c1191b83740052dc7695878e"
 
 [[constraint]]
+  name = "github.com/jen20/riviera"
+  revision = "7ee711f4d8cc27b811bde3907614ecd86e98c9bc"
+
+[[constraint]]
   name = "github.com/jmespath/go-jmespath"
   revision = "bd40a432e4c76585ef6b72d3fd96fb9b6dc7b68d"
+
+[[constraint]]
+  name = "github.com/joyent/gocommon"
+  revision = "b78708995d1c2ebdb64a3061b0bca5d8ccdf0fc2"
+
+[[constraint]]
+  name = "github.com/joyent/gomanta"
+  revision = "ece4f0cbe61f600794bbcff71d8f9ee86909b2dc"
+
+[[constraint]]
+  name = "github.com/joyent/gosign"
+  revision = "8978c75ffefb3f63a977ad9cbfce40caeb40177e"
 
 [[constraint]]
   name = "github.com/joyent/triton-go"
@@ -244,7 +256,7 @@
 
 [[constraint]]
   name = "github.com/mattn/go-shellwords"
-  version = "v1.0.1"
+  revision = "753a2322a99f87c0eff284980e77f53041555bc6"
 
 [[constraint]]
   name = "github.com/mitchellh/cli"
@@ -281,6 +293,10 @@
 [[constraint]]
   name = "github.com/mitchellh/mapstructure"
   revision = "53818660ed4955e899c0bcafa97299a388bd7c8e"
+
+[[constraint]]
+  name = "github.com/mitchellh/packer"
+  revision = "314aad379a39f6ad5bcca278e6757d9abbb3a52e"
 
 [[constraint]]
   name = "github.com/mitchellh/panicwrap"
@@ -331,12 +347,8 @@
   revision = "4080a521c6ea4872f38bae658ac17b774eefcfe1"
 
 [[constraint]]
-  name = "github.com/ugorji/go"
-  revision = "84cb69a8af8316eed8cf4a3c9368a56977850062"
-
-[[constraint]]
   name = "github.com/ulikunitz/xz"
-  version = "v0.5.4"
+  revision = "0c6b41e72360850ca4f98dc341fd999726ea007f"
 
 [[constraint]]
   name = "github.com/xanzy/ssh-agent"
@@ -352,23 +364,23 @@
 
 [[constraint]]
   name = "golang.org/x/crypto"
-  revision = "453249f01cfeb54c3d549ddb75ff152ca243f9d8"
+  revision = "eb71ad9bd329b5ac0fd0148dd99bd62e8be8e035"
 
 [[constraint]]
   name = "golang.org/x/net"
-  revision = "f2499483f923065a842d38eb4c7f1927e6fc6e6d"
+  revision = "a04bdaca5b32abe1c069418fb7088ae607de5bd0"
 
 [[constraint]]
   name = "golang.org/x/oauth2"
-  revision = "314dd2c0bf3ebd592ec0d20847d27e79d0dbe8dd"
+  revision = "bb50c06baba3d0c76f9d125c0719093e315b5b44"
 
 [[constraint]]
   name = "golang.org/x/sys"
-  revision = "0b25a408a50076fbbcae6b7ac0ea5fbb0b085e79"
+  branch = "master"
 
 [[constraint]]
   name = "golang.org/x/text"
-  revision = "e56139fd9c5bc7244c76116c68e500765bb6db6b"
+  revision = "c01e4764d870b77f8abe5096ee19ad20d80e8075"
 
 [[constraint]]
   name = "google.golang.org/api"
@@ -376,7 +388,7 @@
 
 [[constraint]]
   name = "google.golang.org/appengine"
-  version = "v1.0.0"
+  revision = "b667a5000b082e49c6c6d16867d376a12e9490cd"
 
 [[constraint]]
   name = "google.golang.org/genproto"
@@ -389,4 +401,3 @@
 [[constraint]]
   name = "gopkg.in/yaml.v2"
   revision = "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b"
-
