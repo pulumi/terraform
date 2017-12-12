@@ -187,10 +187,9 @@ func (d *ResourceData) Set(key string, value interface{}) error {
 	}
 
 	err := d.setWriter.WriteField(strings.Split(key, "."), value)
-	// TODO: uncomment this once [pulumi/pulumi-cloud#56] is solved
-	//if err != nil && d.panicOnError {
-	//	panic(err)
-	//}
+	if err != nil && d.panicOnError {
+		panic(err)
+	}
 	return err
 }
 
@@ -316,10 +315,6 @@ func (d *ResourceData) State() *terraform.InstanceState {
 
 	mapW := &MapFieldWriter{Schema: d.schema}
 	if err := mapW.WriteField(nil, rawMap); err != nil {
-		if d.panicOnError {
-			panic(err)
-		}
-
 		return nil
 	}
 
