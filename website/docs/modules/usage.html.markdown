@@ -27,7 +27,7 @@ the [Consul module for AWS](https://registry.terraform.io/modules/hashicorp/cons
 from the [Terraform Registry](https://registry.terraform.io). Other source
 types are supported, as described in the following section.
 
-Just like a resource, the a module's configuration can be deleted to destroy the
+Just like a resource, a module's configuration can be deleted to destroy the
 resources belonging to the module.
 
 ## Source
@@ -66,7 +66,7 @@ as well as performing other Terraform working directory initialization such
 as installing providers.
 
 By default the command will not check for available updates to already-installed
-modules, but you can use the `-update` option to check for available upgrades.
+modules, but you can use the `-upgrade` option to check for available upgrades.
 When version constraints are specified (as described in the following section)
 a newer version will be used only if it is within the given constraint.
 
