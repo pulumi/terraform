@@ -56,7 +56,7 @@
 
 [[constraint]]
   name = "github.com/aws/aws-sdk-go"
-  version = "v1.10.36"
+  version = "=v1.12.27"
 
 [[constraint]]
   name = "github.com/bgentry/go-netrc"
@@ -132,7 +132,7 @@
 
 [[constraint]]
   name = "github.com/hashicorp/go-cleanhttp"
-  revision = "3573b8b52aa7b37b9358d966a898feb387f62437"
+  branch = "master"
 
 [[constraint]]
   name = "github.com/hashicorp/go-getter"
@@ -164,7 +164,7 @@
 
 [[constraint]]
   name = "github.com/hashicorp/go-version"
-  revision = "e96d3840402619007766590ecea8dd7af1292276"
+  revision = "4fe82ae3040f80a03d04d2cccb5606a626b8e1ee"
 
 [[constraint]]
   name = "github.com/hashicorp/hcl"
@@ -220,7 +220,7 @@
 
 [[constraint]]
   name = "github.com/joyent/triton-go"
-  revision = "5a58ad2cdec95cddd1e0a2e56f559341044b04f0"
+  revision = "86ba9699869b6cd5ea3290faad7be659efc7d6ce"
 
 [[constraint]]
   name = "github.com/kardianos/osext"
@@ -260,7 +260,7 @@
 
 [[constraint]]
   name = "github.com/mitchellh/cli"
-  revision = "65fcae5817c8600da98ada9d7edf26dd1a84837b"
+  branch = "master"
 
 [[constraint]]
   name = "github.com/mitchellh/colorstring"
@@ -324,7 +324,7 @@
 
 [[constraint]]
   name = "github.com/posener/complete"
-  revision = "f4461a52b6329c11190f11fe3384ec8aa964e21c"
+  revision = "6bee943216c8cea4cc983c8596346d8945279a1f"
 
 [[constraint]]
   name = "github.com/ryanuber/columnize"
@@ -340,7 +340,7 @@
 
 [[constraint]]
   name = "github.com/terraform-providers/terraform-provider-aws"
-  revision = "669207b8fee698ccc3fc47a7b99f812078b7ef87"
+  revision = "248233f15947082e83b89a885d8c90ecc32f4da5"
 
 [[constraint]]
   name = "github.com/terraform-providers/terraform-provider-openstack"
@@ -364,7 +364,7 @@
 
 [[constraint]]
   name = "golang.org/x/crypto"
-  revision = "eb71ad9bd329b5ac0fd0148dd99bd62e8be8e035"
+  branch = "master"
 
 [[constraint]]
   name = "golang.org/x/net"
