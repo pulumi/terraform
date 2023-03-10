@@ -4,7 +4,7 @@ This repository contains only Terraform core, which includes the command line in
 
 **All communication on GitHub, the community forum, and other HashiCorp-provided communication channels is subject to [the HashiCorp community guidelines](https://www.hashicorp.com/community-guidelines).**
 
-This document provides guidance on Terraform contribution recommended practices. It covers what we're looking for in order to help set some expectations and help you get the most out of participation in this project. 
+This document provides guidance on Terraform contribution recommended practices. It covers what we're looking for in order to help set some expectations and help you get the most out of participation in this project.
 
 To record a bug report, enhancement proposal, or give any other product feedback, please [open a GitHub issue](https://github.com/hashicorp/terraform/issues/new/choose) using the most appropriate issue template. Please do fill in all of the information the issue templates request, because we've seen from experience that this will maximize the chance that we'll be able to act on your feedback.
 
@@ -30,13 +30,13 @@ To record a bug report, enhancement proposal, or give any other product feedback
 
 ## Contributing Fixes
 
-It can be tempting to want to dive into an open source project and help _build the thing_ you believe you're missing. It's a wonderful and helpful intention. However, Terraform is a complex tool. Many seemingly simple changes can have serious effects on other areas of the code and it can take some time to become familiar with the effects of even basic changes. The Terraform team is not immune to unintended and sometimes undesirable changes. We do take our work seriously, and appreciate the globally diverse community that relies on Terraform for workflows of all sizes and criticality. 
+It can be tempting to want to dive into an open source project and help _build the thing_ you believe you're missing. It's a wonderful and helpful intention. However, Terraform is a complex tool. Many seemingly simple changes can have serious effects on other areas of the code and it can take some time to become familiar with the effects of even basic changes. The Terraform team is not immune to unintended and sometimes undesirable changes. We do take our work seriously, and appreciate the globally diverse community that relies on Terraform for workflows of all sizes and criticality.
 
-As a result of Terraform's complexity and high bar for stability, the most straightforward way to start helping with the Terraform project is to pick an existing bug and [get to work](#terraform-clicore-development-environment). 
+As a result of Terraform's complexity and high bar for stability, the most straightforward way to start helping with the Terraform project is to pick an existing bug and [get to work](#terraform-clicore-development-environment).
 
 For new contributors we've labeled a few issues with `Good First Issue` as a nod to issues which will help get you familiar with Terraform development, while also providing an onramp to the codebase itself.
 
-Read the documentation, and don't be afraid to [ask questions](https://discuss.hashicorp.com/c/terraform-core/27). 
+Read the documentation, and don't be afraid to [ask questions](https://discuss.hashicorp.com/c/terraform-core/27).
 
 ## Proposing a Change
 
@@ -44,7 +44,7 @@ In order to be respectful of the time of community contributors, we aim to discu
 
 If the bug you wish to fix or enhancement you wish to implement isn't already covered by a GitHub issue that contains feedback from the Terraform team, please do start a discussion (either in [a new GitHub issue](https://github.com/hashicorp/terraform/issues/new/choose) or an existing one, as appropriate) before you invest significant development time. If you mention your intent to implement the change described in your issue, the Terraform team can, as best as possible, prioritize including implementation-related feedback in the subsequent discussion.
 
-At this time, we do not have a formal process for reviewing outside proposals that significantly change Terraform's workflow, its primary usage patterns, and its language. Additionally, some seemingly simple proposals can have deep effects across Terraform, which is why we strongly suggest starting with an issue-based proposal. 
+At this time, we do not have a formal process for reviewing outside proposals that significantly change Terraform's workflow, its primary usage patterns, and its language. Additionally, some seemingly simple proposals can have deep effects across Terraform, which is why we strongly suggest starting with an issue-based proposal.
 
 For large proposals that could entail a significant design phase, we wish to be up front with potential contributors that, unfortunately, we are unlikely to be able to give prompt feedback. We are still interested to hear about your use-cases so that we can consider ways to meet them as part of other larger projects.
 
@@ -54,7 +54,7 @@ This repository is primarily maintained by a small team at HashiCorp along with 
 
 ### Caveats & areas of special concern
 
-There are some areas of Terraform which are of special concern to the Terraform team. 
+There are some areas of Terraform which are of special concern to the Terraform team.
 
 #### State Storage Backends
 
@@ -68,15 +68,15 @@ We are working to remove ourselves from the critical path of state storage backe
 
 #### Provisioners
 
-Provisioners are an area of concern in Terraform for a number of reasons. Chiefly, they are often used in the place of configuration management tools or custom providers. 
+Provisioners are an area of concern in Terraform for a number of reasons. Chiefly, they are often used in the place of configuration management tools or custom providers.
 
-There are two main types of provisioners in Terraform, the generic provisioners (`file`,`local-exec`, and `remote-exec`) and the tool-specific provisioners (`chef`, `habbitat`, `puppet` & `salt-masterless`). **The tool-specific provisioners [are deprecated](https://discuss.hashicorp.com/t/notice-terraform-to-begin-deprecation-of-vendor-tool-specific-provisioners-starting-in-terraform-0-13-4/13997).** In practice this means we will not be accepting PRs for these areas of the codebase. 
+There are two main types of provisioners in Terraform, the generic provisioners (`file`,`local-exec`, and `remote-exec`) and the tool-specific provisioners (`chef`, `habbitat`, `puppet` & `salt-masterless`). **The tool-specific provisioners [are deprecated](https://discuss.hashicorp.com/t/notice-terraform-to-begin-deprecation-of-vendor-tool-specific-provisioners-starting-in-terraform-0-13-4/13997).** In practice this means we will not be accepting PRs for these areas of the codebase.
 
 From our [documentation](https://www.terraform.io/docs/provisioners/index.html):
 
 > ... they [...] add a considerable amount of complexity and uncertainty to Terraform usage.[...] we still recommend attempting to solve it [your problem] using other techniques first, and use provisioners only if there is no other option.
 
-The Terraform team is in the process of building a way forward which continues to decrease reliance on provisioners. In the mean time however, as our documentation indicates, they are a tool of last resort. As such expect that PRs and issues for provisioners are not high in priority. 
+The Terraform team is in the process of building a way forward which continues to decrease reliance on provisioners. In the mean time however, as our documentation indicates, they are a tool of last resort. As such expect that PRs and issues for provisioners are not high in priority.
 
 Please see the [CODEOWNERS](https://github.com/hashicorp/terraform/blob/main/CODEOWNERS) file for the status of a given provisioner. Community members with an interest in a particular provisioner are welcome to help maintain it.
 
@@ -86,15 +86,15 @@ Maintainers are key contributors to our Open Source project. They contribute the
 
 For code that has a listed maintainer or maintainers in our [CODEOWNERS](https://github.com/hashicorp/terraform/blob/main/CODEOWNERS) file, the Terraform team will highlight them for participation in PRs which relate to the area of code they maintain. The expectation is that a maintainer will review the code and work with the PR contributor before the code is merged by the Terraform team.
 
-There is no expectation on response time for our maintainers; they may be indisposed for prolonged periods of time. Please be patient. Discussions on when code becomes "unmaintained" will be on a case-by-case basis. 
+There is no expectation on response time for our maintainers; they may be indisposed for prolonged periods of time. Please be patient. Discussions on when code becomes "unmaintained" will be on a case-by-case basis.
 
-If an an unmaintained area of code interests you and you'd like to become a maintainer, you may simply make a PR against our [CODEOWNERS](https://github.com/hashicorp/terraform/blob/main/CODEOWNERS) file with your github handle attached to the approriate area. If there is a maintainer or team of maintainers for that area, please coordinate with them as necessary. 
+If an an unmaintained area of code interests you and you'd like to become a maintainer, you may simply make a PR against our [CODEOWNERS](https://github.com/hashicorp/terraform/blob/main/CODEOWNERS) file with your github handle attached to the approriate area. If there is a maintainer or team of maintainers for that area, please coordinate with them as necessary.
 
 ### Pull Request Lifecycle
 
 1. You are welcome to submit a [draft pull request](https://github.blog/2019-02-14-introducing-draft-pull-requests/) for commentary or review before it is fully completed. It's also a good idea to include specific questions or items you'd like feedback on.
 2. Once you believe your pull request is ready to be merged you can create your pull request.
-3. When time permits Terraform's core team members will look over your contribution and either merge, or provide comments letting you know if there is anything left to do. It may take some time for us to respond. We may also have questions that we need answered about the code, either because something doesn't make sense to us or because we want to understand your thought process. We kindly ask that you do not target specific team members. 
+3. When time permits Terraform's core team members will look over your contribution and either merge, or provide comments letting you know if there is anything left to do. It may take some time for us to respond. We may also have questions that we need answered about the code, either because something doesn't make sense to us or because we want to understand your thought process. We kindly ask that you do not target specific team members.
 4. If we have requested changes, you can either make those changes or, if you disagree with the suggested changes, we can have a conversation about our reasoning and agree on a path forward. This may be a multi-step process. Our view is that pull requests are a chance to collaborate, and we welcome conversations about how to do things better. It is the contributor's responsibility to address any changes requested. While reviewers are happy to give guidance, it is unsustainable for us to perform the coding work necessary to get a PR into a mergeable state.
 5. Once all outstanding comments and checklist items have been addressed, your contribution will be merged! Merged PRs may or may not be included in the next release based on changes the Terraform teams deems as breaking or not. The core team takes care of updating the [CHANGELOG.md](https://github.com/hashicorp/terraform/blob/main/CHANGELOG.md) as they merge.
 6. In some cases, we might decide that a PR should be closed without merging. We'll make sure to provide clear reasoning when this happens. Following the recommended process above is one of the ways to ensure you don't spend time on a PR we can't or won't merge.
@@ -164,8 +164,8 @@ go test ./...
 As you make your changes, you can re-run the above command to ensure that the tests are *still* passing. If you are working only on a specific Go package, you can speed up your testing cycle by testing only that single package, or packages under a particular package prefix:
 
 ```
-go test ./internal/command/...
-go test ./internal/addrs
+go test ./pkg/command/...
+go test ./pkg/addrs
 ```
 
 ## Acceptance Tests: Testing interactions with external services
@@ -177,7 +177,7 @@ However, several Terraform components interact with external services, such as t
 There are some optional tests in the Terraform CLI codebase that *do* interact with external services, which we collectively refer to as "acceptance tests". You can enable these by setting the environment variable `TF_ACC=1` when running the tests. We recommend focusing only on the specific package you are working on when enabling acceptance tests, both because it can help the test run to complete faster and because you are less likely to encounter failures due to drift in systems unrelated to your current goal:
 
 ```
-TF_ACC=1 go test ./internal/initwd
+TF_ACC=1 go test ./pkg/initwd
 ```
 
 Because the acceptance tests depend on services outside of the Terraform codebase, and because the acceptance tests are usually used only when making changes to the systems they cover, it is common and expected that drift in those external systems will cause test failures. Because of this, prior to working on a system covered by acceptance tests it's important to run the existing tests for that system in an *unchanged* work tree first and respond to any test failures that preexist, to avoid misinterpreting such failures as bugs in your new changes.

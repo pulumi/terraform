@@ -32,7 +32,7 @@ Terraform v0.13.0 and later.
 If you have a working toolchain for the Go programming language, you can
 build a `terraform-bundle` executable as follows:
 
-* `git clone --single-branch --branch=v0.15 --depth=1 https://github.com/hashicorp/terraform.git`
+* `git clone --single-branch --branch=v0.15 --depth=1 https://github.com/pulumi/terraform.git`
 * `cd terraform`
 * `go build -o ../terraform-bundle ./tools/terraform-bundle`
 

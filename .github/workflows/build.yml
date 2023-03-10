@@ -62,7 +62,7 @@ jobs:
           set -e
           RAW_VERSION=$(git describe --tags --match='v*' ${GITHUB_SHA})
           echo "
-          
+
           Raw version is ${RAW_VERSION}"
           echo "::set-output name=raw-version::${RAW_VERSION}"
       - name: Decide version number
@@ -95,8 +95,8 @@ jobs:
           if [[ "$EXPERIMENTS_ENABLED" == 1 ]]; then
             LDFLAGS="${LDFLAGS} -X 'main.experimentsAllowed=yes'"
           fi
-          LDFLAGS="${LDFLAGS} -X 'github.com/hashicorp/terraform/version.Version=${BASE_VERSION}'"
-          LDFLAGS="${LDFLAGS} -X 'github.com/hashicorp/terraform/version.Prerelease=${PRERELEASE}'"
+          LDFLAGS="${LDFLAGS} -X 'github.com/pulumi/terraform/version.Version=${BASE_VERSION}'"
+          LDFLAGS="${LDFLAGS} -X 'github.com/pulumi/terraform/version.Prerelease=${PRERELEASE}'"
 
           echo "Building Terraform CLI ${VERSION}"
           if [[ "$EXPERIMENTS_ENABLED" == 1 ]]; then
@@ -347,7 +347,7 @@ jobs:
       fail-fast: false
 
     env:
-      build_script: ./internal/command/e2etest/make-archive.sh
+      build_script: ./pkg/command/e2etest/make-archive.sh
 
     steps:
       - uses: actions/checkout@v2
@@ -367,12 +367,12 @@ jobs:
           # environment variables defined above. The e2e test harness
           # needs to know the version we're building for so it can verify
           # that "terraform version" is returning that version number.
-          bash ./internal/command/e2etest/make-archive.sh
+          bash ./pkg/command/e2etest/make-archive.sh
 
       - uses: actions/upload-artifact@v2
         with:
           name: terraform-e2etest_${{ matrix.goos }}_${{ matrix.goarch }}.zip
-          path: internal/command/e2etest/build/terraform-e2etest_${{ matrix.goos }}_${{ matrix.goarch }}.zip
+          path: pkg/command/e2etest/build/terraform-e2etest_${{ matrix.goos }}_${{ matrix.goarch }}.zip
           if-no-files-found: error
 
   e2etest-linux:

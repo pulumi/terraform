@@ -15,7 +15,7 @@ RUN apk add --no-cache git bash openssh
 ENV TF_DEV=true
 ENV TF_RELEASE=1
 
-WORKDIR $GOPATH/src/github.com/hashicorp/terraform
+WORKDIR $GOPATH/src/github.com/pulumi/terraform
 COPY . .
 RUN /bin/bash ./scripts/build.sh
 

@@ -42,24 +42,24 @@ type protocStep struct {
 var protocSteps = []protocStep{
 	{
 		"tfplugin5 (provider wire protocol version 5)",
-		"internal/tfplugin5",
+		"pkg/tfplugin5",
 		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin5.proto"},
 	},
 	{
 		"tfplugin6 (provider wire protocol version 6)",
-		"internal/tfplugin6",
+		"pkg/tfplugin6",
 		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin6.proto"},
 	},
 	{
 		"tfplan (plan file serialization)",
-		"internal/plans/internal/planproto",
+		"pkg/plans/internal/planproto",
 		[]string{"--go_out=paths=source_relative:.", "planfile.proto"},
 	},
 }
 
 func main() {
 	if len(os.Args) != 2 {
-		log.Fatal("Usage: go run github.com/hashicorp/terraform/tools/protobuf-compile <basedir>")
+		log.Fatal("Usage: go run github.com/pulumi/terraform/tools/protobuf-compile <basedir>")
 	}
 	baseDir := os.Args[1]
 	workDir := filepath.Join(baseDir, "tools/protobuf-compile/.workdir")
