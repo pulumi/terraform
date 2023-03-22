@@ -56,7 +56,7 @@ func TestConsolidateWarnings(t *testing.T) {
 	got := diags.ConsolidateWarnings(2).ForRPC()
 	want := Diagnostics{
 		// First set
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 1",
 			Detail_:   "This one has a subject 0",
@@ -66,7 +66,7 @@ func TestConsolidateWarnings(t *testing.T) {
 				End:      SourcePos{Line: 1, Column: 1, Byte: 0},
 			},
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Error,
 			Summary_:  "Error 1",
 			Detail_:   "This one has a subject 0",
@@ -76,18 +76,18 @@ func TestConsolidateWarnings(t *testing.T) {
 				End:      SourcePos{Line: 1, Column: 1, Byte: 0},
 			},
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 2",
 			Detail_:   "This one is sourceless 0",
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 3",
 		},
 
 		// Second set (consolidation begins; note additional paragraph in Warning 1 detail)
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 1",
 			Detail_:   "This one has a subject 1\n\n(and 2 more similar warnings elsewhere)",
@@ -97,7 +97,7 @@ func TestConsolidateWarnings(t *testing.T) {
 				End:      SourcePos{Line: 1, Column: 1, Byte: 0},
 			},
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Error,
 			Summary_:  "Error 1",
 			Detail_:   "This one has a subject 1",
@@ -107,18 +107,18 @@ func TestConsolidateWarnings(t *testing.T) {
 				End:      SourcePos{Line: 1, Column: 1, Byte: 0},
 			},
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 2",
 			Detail_:   "This one is sourceless 1",
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 3",
 		},
 
 		// Third set (no more Warning 1, because it's consolidated)
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Error,
 			Summary_:  "Error 1",
 			Detail_:   "This one has a subject 2",
@@ -128,18 +128,18 @@ func TestConsolidateWarnings(t *testing.T) {
 				End:      SourcePos{Line: 1, Column: 1, Byte: 0},
 			},
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 2",
 			Detail_:   "This one is sourceless 2",
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 3",
 		},
 
 		// Fourth set (still no warning 1)
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Error,
 			Summary_:  "Error 1",
 			Detail_:   "This one has a subject 3",
@@ -149,19 +149,19 @@ func TestConsolidateWarnings(t *testing.T) {
 				End:      SourcePos{Line: 1, Column: 1, Byte: 0},
 			},
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 2",
 			Detail_:   "This one is sourceless 3",
 		},
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 3",
 		},
 
 		// Special straggler warning gets to show up unconsolidated, because
 		// there is only one of it.
-		&rpcFriendlyDiag{
+		&pulumiRpcFriendlyDiag{
 			Severity_: Warning,
 			Summary_:  "Warning 4",
 			Detail_:   "Only one of this one",

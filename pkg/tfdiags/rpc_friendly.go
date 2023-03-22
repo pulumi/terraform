@@ -4,7 +4,7 @@ import (
 	"encoding/gob"
 )
 
-type rpcFriendlyDiag struct {
+type pulumiRpcFriendlyDiag struct {
 	Severity_ Severity
 	Summary_  string
 	Detail_   string
@@ -12,7 +12,7 @@ type rpcFriendlyDiag struct {
 	Context_  *SourceRange
 }
 
-// rpcFriendlyDiag transforms a given diagnostic so that is more friendly to
+// pulumiRpcFriendlyDiag transforms a given diagnostic so that is more friendly to
 // RPC.
 //
 // In particular, it currently returns an object that can be serialized and
@@ -21,7 +21,7 @@ type rpcFriendlyDiag struct {
 func makeRPCFriendlyDiag(diag Diagnostic) Diagnostic {
 	desc := diag.Description()
 	source := diag.Source()
-	return &rpcFriendlyDiag{
+	return &pulumiRpcFriendlyDiag{
 		Severity_: diag.Severity(),
 		Summary_:  desc.Summary,
 		Detail_:   desc.Detail,
@@ -30,35 +30,35 @@ func makeRPCFriendlyDiag(diag Diagnostic) Diagnostic {
 	}
 }
 
-func (d *rpcFriendlyDiag) Severity() Severity {
+func (d *pulumiRpcFriendlyDiag) Severity() Severity {
 	return d.Severity_
 }
 
-func (d *rpcFriendlyDiag) Description() Description {
+func (d *pulumiRpcFriendlyDiag) Description() Description {
 	return Description{
 		Summary: d.Summary_,
 		Detail:  d.Detail_,
 	}
 }
 
-func (d *rpcFriendlyDiag) Source() Source {
+func (d *pulumiRpcFriendlyDiag) Source() Source {
 	return Source{
 		Subject: d.Subject_,
 		Context: d.Context_,
 	}
 }
 
-func (d rpcFriendlyDiag) FromExpr() *FromExpr {
+func (d pulumiRpcFriendlyDiag) FromExpr() *FromExpr {
 	// RPC-friendly diagnostics cannot preserve expression information because
 	// expressions themselves are not RPC-friendly.
 	return nil
 }
 
-func (d rpcFriendlyDiag) ExtraInfo() interface{} {
+func (d pulumiRpcFriendlyDiag) ExtraInfo() interface{} {
 	// RPC-friendly diagnostics always discard any "extra information".
 	return nil
 }
 
 func init() {
-	gob.Register((*rpcFriendlyDiag)(nil))
+	gob.Register((*pulumiRpcFriendlyDiag)(nil))
 }
