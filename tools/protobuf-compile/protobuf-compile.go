@@ -37,23 +37,33 @@ type protocStep struct {
 	DisplayName string
 	WorkDir     string
 	Args        []string
+	PostStep    func() error
 }
 
 var protocSteps = []protocStep{
 	{
 		"tfplugin5 (provider wire protocol version 5)",
 		"pkg/tfplugin5",
-		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin5pulumi.proto"},
+		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./pulumi/tfplugin5pulumi.proto"},
+		func() error {
+			return os.Rename("pkg/tfplugin5/pulumi/tfplugin5pulumi.pb.go",
+				"pkg/tfplugin5/tfplugin5pulumi.pb.go")
+		},
 	},
 	{
 		"tfplugin6 (provider wire protocol version 6)",
 		"pkg/tfplugin6",
-		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin6pulumi.proto"},
+		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./pulumi/tfplugin6pulumi.proto"},
+		func() error {
+			return os.Rename("pkg/tfplugin6/pulumi/tfplugin6pulumi.pb.go",
+				"pkg/tfplugin6/tfplugin6pulumi.pb.go")
+		},
 	},
 	{
 		"tfplan (plan file serialization)",
 		"pkg/plans/internal/planproto",
 		[]string{"--go_out=paths=source_relative:.", "planfile.proto"},
+		nil,
 	},
 }
 
@@ -121,8 +131,14 @@ func main() {
 		if err != nil {
 			log.Printf("failed to compile: %s", err)
 		}
-	}
 
+		if step.PostStep != nil {
+			err := step.PostStep()
+			if err != nil {
+				log.Printf("failed to execute PostStep: %s", err)
+			}
+		}
+	}
 }
 
 // downloadProtoc downloads the given version of protoc into the given
