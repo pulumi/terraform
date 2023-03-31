@@ -19,7 +19,7 @@
 syntax = "proto3";
 option go_package = "github.com/pulumi/terraform/pkg/tfplugin6";
 
-package tfplugin6;
+package tfplugin6pulumi;
 
 // DynamicValue is an opaque encoding of terraform data, with the field name
 // indicating the encoding scheme used.
