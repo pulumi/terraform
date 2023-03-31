@@ -43,12 +43,12 @@ var protocSteps = []protocStep{
 	{
 		"tfplugin5 (provider wire protocol version 5)",
 		"pkg/tfplugin5",
-		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin5.proto"},
+		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin5pulumi.proto"},
 	},
 	{
 		"tfplugin6 (provider wire protocol version 6)",
 		"pkg/tfplugin6",
-		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin6.proto"},
+		[]string{"--go_out=paths=source_relative,plugins=grpc:.", "./tfplugin6pulumi.proto"},
 	},
 	{
 		"tfplan (plan file serialization)",
