@@ -14,6 +14,7 @@ import (
 	svchost "github.com/hashicorp/terraform-svchost"
 	"github.com/hashicorp/terraform-svchost/auth"
 	"github.com/hashicorp/terraform-svchost/disco"
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/cloud"
 	"github.com/pulumi/terraform/pkg/configs"
@@ -24,7 +25,6 @@ import (
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
 	"github.com/pulumi/terraform/version"
-	"github.com/mitchellh/cli"
 	"github.com/zclconf/go-cty/cty"
 
 	backendLocal "github.com/pulumi/terraform/pkg/backend/local"

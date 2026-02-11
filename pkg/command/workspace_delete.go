@@ -5,13 +5,13 @@ import (
 	"strings"
 	"time"
 
+	"github.com/mitchellh/cli"
+	"github.com/posener/complete"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/clistate"
 	"github.com/pulumi/terraform/pkg/command/views"
 	"github.com/pulumi/terraform/pkg/states"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/cli"
-	"github.com/posener/complete"
 )
 
 type WorkspaceDeleteCommand struct {

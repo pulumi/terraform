@@ -8,8 +8,8 @@ import (
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/zclconf/go-cty/cty"
 
-	"github.com/pulumi/terraform/pkg/configs/hcl2shim"
 	"github.com/mitchellh/reflectwalk"
+	"github.com/pulumi/terraform/pkg/configs/hcl2shim"
 )
 
 func TestResourceConfigGet(t *testing.T) {

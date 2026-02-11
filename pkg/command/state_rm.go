@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/clistate"
 	"github.com/pulumi/terraform/pkg/command/views"
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/cli"
 )
 
 // StateRmCommand is a Command implementation that shows a single resource.

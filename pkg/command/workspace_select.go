@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pulumi/terraform/pkg/tfdiags"
 	"github.com/mitchellh/cli"
 	"github.com/posener/complete"
+	"github.com/pulumi/terraform/pkg/tfdiags"
 )
 
 type WorkspaceSelectCommand struct {

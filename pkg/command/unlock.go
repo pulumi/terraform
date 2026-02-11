@@ -7,9 +7,9 @@ import (
 
 	"github.com/pulumi/terraform/pkg/states/statemgr"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/cli"
 )
 
 // UnlockCommand is a cli.Command implementation that manually unlocks

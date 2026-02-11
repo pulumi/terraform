@@ -4,11 +4,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/providers"
 	"github.com/pulumi/terraform/pkg/states"
-	"github.com/mitchellh/cli"
 	"github.com/zclconf/go-cty/cty"
 )
 

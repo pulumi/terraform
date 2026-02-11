@@ -9,10 +9,10 @@ import (
 	"runtime"
 
 	"github.com/armon/circbuf"
+	"github.com/mitchellh/go-linereader"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/provisioners"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/go-linereader"
 	"github.com/zclconf/go-cty/cty"
 )
 

@@ -11,10 +11,10 @@ import (
 
 	"strings"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/communicator"
 	"github.com/pulumi/terraform/pkg/communicator/remote"
 	"github.com/pulumi/terraform/pkg/provisioners"
-	"github.com/mitchellh/cli"
 	"github.com/zclconf/go-cty/cty"
 )
 

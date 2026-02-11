@@ -9,6 +9,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/plans"
@@ -17,7 +18,6 @@ import (
 	"github.com/pulumi/terraform/pkg/states/statemgr"
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/version"
-	"github.com/mitchellh/cli"
 	"github.com/zclconf/go-cty/cty"
 )
 

@@ -5,9 +5,9 @@ import (
 	"database/sql"
 	"fmt"
 
+	"github.com/lib/pq"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/legacy/helper/schema"
-	"github.com/lib/pq"
 )
 
 const (

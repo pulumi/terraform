@@ -6,6 +6,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/clistate"
@@ -14,7 +15,6 @@ import (
 	"github.com/pulumi/terraform/pkg/plans"
 	"github.com/pulumi/terraform/pkg/states/statemgr"
 	"github.com/pulumi/terraform/pkg/terminal"
-	"github.com/mitchellh/cli"
 )
 
 func testOperationRefresh(t *testing.T, configDir string) (*backend.Operation, func(), func(*testing.T) *terminal.TestOutput) {

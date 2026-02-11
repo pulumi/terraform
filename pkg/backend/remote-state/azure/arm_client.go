@@ -13,9 +13,9 @@ import (
 	"github.com/Azure/go-autorest/autorest/azure"
 	"github.com/hashicorp/go-azure-helpers/authentication"
 	"github.com/hashicorp/go-azure-helpers/sender"
+	"github.com/manicminer/hamilton/environments"
 	"github.com/pulumi/terraform/pkg/httpclient"
 	"github.com/pulumi/terraform/version"
-	"github.com/manicminer/hamilton/environments"
 	"github.com/tombuildsstuff/giovanni/storage/2018-11-09/blob/blobs"
 	"github.com/tombuildsstuff/giovanni/storage/2018-11-09/blob/containers"
 )

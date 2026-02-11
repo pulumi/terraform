@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/command/arguments"
@@ -12,7 +13,6 @@ import (
 	"github.com/pulumi/terraform/pkg/states"
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/cli"
 )
 
 // StateMvCommand is a Command implementation that shows a single resource.

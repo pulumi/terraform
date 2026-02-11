@@ -5,12 +5,12 @@ import (
 	"os"
 	"strings"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/format"
 	"github.com/pulumi/terraform/pkg/states"
-	"github.com/mitchellh/cli"
 )
 
 // StateShowCommand is a Command implementation that shows a single resource.

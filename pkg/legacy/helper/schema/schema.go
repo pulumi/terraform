@@ -22,10 +22,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/pulumi/terraform/pkg/configs/hcl2shim"
-	"github.com/pulumi/terraform/pkg/legacy/terraform"
 	"github.com/mitchellh/copystructure"
 	"github.com/mitchellh/mapstructure"
+	"github.com/pulumi/terraform/pkg/configs/hcl2shim"
+	"github.com/pulumi/terraform/pkg/legacy/terraform"
 )
 
 // Name of ENV variable which (if not empty) prefers panic over error

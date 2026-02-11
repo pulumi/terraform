@@ -16,6 +16,8 @@ import (
 	version "github.com/hashicorp/go-version"
 	svchost "github.com/hashicorp/terraform-svchost"
 	"github.com/hashicorp/terraform-svchost/disco"
+	"github.com/mitchellh/cli"
+	"github.com/mitchellh/colorstring"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/logging"
@@ -24,8 +26,6 @@ import (
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
 	tfversion "github.com/pulumi/terraform/version"
-	"github.com/mitchellh/cli"
-	"github.com/mitchellh/colorstring"
 	"github.com/zclconf/go-cty/cty"
 
 	backendLocal "github.com/pulumi/terraform/pkg/backend/local"

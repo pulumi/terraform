@@ -8,12 +8,12 @@ import (
 
 	"github.com/zclconf/go-cty/cty"
 
+	"github.com/mitchellh/colorstring"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/plans"
 	"github.com/pulumi/terraform/pkg/states"
 	"github.com/pulumi/terraform/pkg/terraform"
-	"github.com/mitchellh/colorstring"
 )
 
 // StateOpts are the options for formatting a state.

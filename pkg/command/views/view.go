@@ -1,11 +1,11 @@
 package views
 
 import (
+	"github.com/mitchellh/colorstring"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/format"
 	"github.com/pulumi/terraform/pkg/terminal"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/colorstring"
 )
 
 // View is the base layer for command views, encapsulating a set of I/O

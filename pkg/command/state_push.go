@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/clistate"
 	"github.com/pulumi/terraform/pkg/command/views"
@@ -13,7 +14,6 @@ import (
 	"github.com/pulumi/terraform/pkg/states/statemgr"
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/cli"
 )
 
 // StatePushCommand is a Command implementation that shows a single resource.

@@ -9,6 +9,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/configs"
@@ -17,7 +18,6 @@ import (
 	"github.com/pulumi/terraform/pkg/states"
 	"github.com/pulumi/terraform/pkg/states/statefile"
 	"github.com/pulumi/terraform/pkg/states/statemgr"
-	"github.com/mitchellh/cli"
 	"github.com/zclconf/go-cty/cty"
 
 	backendInit "github.com/pulumi/terraform/pkg/backend/init"

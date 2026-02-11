@@ -11,6 +11,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/mitchellh/go-homedir"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/command/clistate"
 	"github.com/pulumi/terraform/pkg/command/views"
@@ -24,7 +25,6 @@ import (
 	"github.com/pulumi/terraform/pkg/states/statemgr"
 	"github.com/pulumi/terraform/pkg/terraform"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/go-homedir"
 	"github.com/zclconf/go-cty/cty"
 )
 

@@ -22,6 +22,7 @@ import (
 	version "github.com/hashicorp/go-version"
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
+	"github.com/mitchellh/copystructure"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/configs"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
@@ -29,7 +30,6 @@ import (
 	"github.com/pulumi/terraform/pkg/plans"
 	"github.com/pulumi/terraform/pkg/tfdiags"
 	tfversion "github.com/pulumi/terraform/version"
-	"github.com/mitchellh/copystructure"
 	"github.com/zclconf/go-cty/cty"
 	ctyjson "github.com/zclconf/go-cty/cty/json"
 )
