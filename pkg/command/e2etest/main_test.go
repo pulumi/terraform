@@ -60,17 +60,6 @@ func setup() func() {
 	}
 }
 
-func canAccessNetwork() bool {
-	// We re-use the flag normally used for acceptance tests since that's
-	// established as a way to opt-in to reaching out to real systems that
-	// may suffer transient errors.
-	return os.Getenv("TF_ACC") != ""
-}
-
 func skipIfCannotAccessNetwork(t *testing.T) {
 	t.Skip("Null provider used in the tests is no longer compatible with this fork of terraform")
-
-	if !canAccessNetwork() {
-		t.Skip("network access not allowed; use TF_ACC=1 to enable")
-	}
 }
