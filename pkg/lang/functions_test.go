@@ -8,9 +8,9 @@ import (
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/hclsyntax"
+	homedir "github.com/mitchellh/go-homedir"
 	"github.com/pulumi/terraform/pkg/experiments"
 	"github.com/pulumi/terraform/pkg/lang/marks"
-	homedir "github.com/mitchellh/go-homedir"
 	"github.com/zclconf/go-cty/cty"
 )
 

@@ -12,6 +12,9 @@ import (
 
 	"github.com/hashicorp/go-plugin"
 	"github.com/hashicorp/terraform-svchost/disco"
+	"github.com/mattn/go-shellwords"
+	"github.com/mitchellh/cli"
+	"github.com/mitchellh/colorstring"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/command/cliconfig"
 	"github.com/pulumi/terraform/pkg/command/format"
@@ -20,9 +23,6 @@ import (
 	"github.com/pulumi/terraform/pkg/logging"
 	"github.com/pulumi/terraform/pkg/terminal"
 	"github.com/pulumi/terraform/version"
-	"github.com/mattn/go-shellwords"
-	"github.com/mitchellh/cli"
-	"github.com/mitchellh/colorstring"
 
 	backendInit "github.com/pulumi/terraform/pkg/backend/init"
 )

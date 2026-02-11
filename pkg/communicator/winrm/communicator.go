@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pulumi/terraform/pkg/communicator/remote"
-	"github.com/pulumi/terraform/pkg/provisioners"
 	"github.com/masterzen/winrm"
 	"github.com/packer-community/winrmcp/winrmcp"
+	"github.com/pulumi/terraform/pkg/communicator/remote"
+	"github.com/pulumi/terraform/pkg/provisioners"
 	"github.com/zclconf/go-cty/cty"
 )
 

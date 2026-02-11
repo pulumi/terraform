@@ -35,6 +35,8 @@ type Variable struct {
 
 	DescriptionSet bool
 	SensitiveSet   bool
+	Ephemeral      bool
+	EphemeralSet   bool
 
 	// Nullable indicates that null is a valid value for this variable. Setting
 	// Nullable to false means that the module can expect this variable to
@@ -115,6 +117,12 @@ func decodeVariableBlock(block *hcl.Block, override bool) (*Variable, hcl.Diagno
 		valDiags := gohcl.DecodeExpression(attr.Expr, nil, &v.Sensitive)
 		diags = append(diags, valDiags...)
 		v.SensitiveSet = true
+	}
+
+	if attr, exists := content.Attributes["ephemeral"]; exists {
+		valDiags := gohcl.DecodeExpression(attr.Expr, nil, &v.Ephemeral)
+		diags = append(diags, valDiags...)
+		v.EphemeralSet = true
 	}
 
 	if attr, exists := content.Attributes["nullable"]; exists {
@@ -537,6 +545,9 @@ var variableBlockSchema = &hcl.BodySchema{
 		},
 		{
 			Name: "nullable",
+		},
+		{
+			Name: "ephemeral",
 		},
 	},
 	Blocks: []hcl.BlockHeaderSchema{

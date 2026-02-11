@@ -7,12 +7,12 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/mitchellh/colorstring"
 	"github.com/pulumi/terraform/pkg/command/arguments"
 	"github.com/pulumi/terraform/pkg/command/format"
 	"github.com/pulumi/terraform/pkg/moduletest"
 	"github.com/pulumi/terraform/pkg/terminal"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/colorstring"
 )
 
 // Test is the view interface for the "terraform test" command.

@@ -7,13 +7,13 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/backend/local"
 	"github.com/pulumi/terraform/pkg/backend/remote-state/inmem"
 	"github.com/pulumi/terraform/pkg/states"
 	"github.com/pulumi/terraform/pkg/states/statemgr"
-	"github.com/mitchellh/cli"
 
 	legacy "github.com/pulumi/terraform/pkg/legacy/terraform"
 )

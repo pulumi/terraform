@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pulumi/terraform/pkg/provisioners"
 	"github.com/mitchellh/cli"
+	"github.com/pulumi/terraform/pkg/provisioners"
 	"github.com/zclconf/go-cty/cty"
 )
 

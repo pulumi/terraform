@@ -5,10 +5,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/backend/remote-state/inmem"
 	"github.com/pulumi/terraform/pkg/states"
-	"github.com/mitchellh/cli"
 )
 
 func TestStatePush_empty(t *testing.T) {

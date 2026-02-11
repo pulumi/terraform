@@ -9,11 +9,11 @@ import (
 	"os"
 	"testing"
 
+	"github.com/lib/pq"
+	_ "github.com/lib/pq"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/states/remote"
 	"github.com/pulumi/terraform/pkg/states/statemgr"
-	"github.com/lib/pq"
-	_ "github.com/lib/pq"
 )
 
 // Function to skip a test unless in ACCeptance test mode.

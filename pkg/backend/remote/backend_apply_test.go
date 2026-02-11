@@ -12,6 +12,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	tfe "github.com/hashicorp/go-tfe"
 	version "github.com/hashicorp/go-version"
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/backend"
 	"github.com/pulumi/terraform/pkg/cloud"
@@ -26,7 +27,6 @@ import (
 	"github.com/pulumi/terraform/pkg/terminal"
 	"github.com/pulumi/terraform/pkg/terraform"
 	tfversion "github.com/pulumi/terraform/version"
-	"github.com/mitchellh/cli"
 )
 
 func testOperationApply(t *testing.T, configDir string) (*backend.Operation, func(), func(*testing.T) *terminal.TestOutput) {

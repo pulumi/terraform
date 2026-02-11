@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pulumi/terraform/pkg/backend/remote-state/inmem"
 	"github.com/mitchellh/cli"
+	"github.com/pulumi/terraform/pkg/backend/remote-state/inmem"
 
 	legacy "github.com/pulumi/terraform/pkg/legacy/terraform"
 )

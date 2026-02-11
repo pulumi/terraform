@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/mitchellh/cli"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/depsfile"
 	"github.com/pulumi/terraform/pkg/getproviders"
-	"github.com/mitchellh/cli"
 )
 
 func TestProvidersLock(t *testing.T) {

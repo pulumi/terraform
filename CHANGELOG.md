@@ -1,5 +1,7 @@
 ## 1.4.1 (Unreleased)
 
+* Support parsing ephemeral variables [https://github.com/pulumi/terraform/pull/9]
+
 ## 1.4.0 (March 08, 2023)
 
 UPGRADE NOTES:

@@ -6,8 +6,8 @@ package command
 import (
 	"fmt"
 
-	"github.com/pulumi/terraform/pkg/repl"
 	"github.com/mitchellh/cli"
+	"github.com/pulumi/terraform/pkg/repl"
 )
 
 func (c *ConsoleCommand) modeInteractive(session *repl.Session, ui cli.Ui) int {

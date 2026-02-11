@@ -7,11 +7,11 @@ import (
 	"io/ioutil"
 	"os"
 
+	"github.com/mitchellh/go-homedir"
 	"github.com/pulumi/terraform/pkg/communicator"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/provisioners"
 	"github.com/pulumi/terraform/pkg/tfdiags"
-	"github.com/mitchellh/go-homedir"
 	"github.com/zclconf/go-cty/cty"
 )
 

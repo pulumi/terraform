@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	version "github.com/hashicorp/go-version"
-	"github.com/pulumi/terraform/pkg/initwd"
 	"github.com/mitchellh/cli"
+	"github.com/pulumi/terraform/pkg/initwd"
 )
 
 type uiModuleInstallHooks struct {

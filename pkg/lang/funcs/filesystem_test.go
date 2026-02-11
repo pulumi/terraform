@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/pulumi/terraform/pkg/lang/marks"
 	homedir "github.com/mitchellh/go-homedir"
+	"github.com/pulumi/terraform/pkg/lang/marks"
 	"github.com/zclconf/go-cty/cty"
 	"github.com/zclconf/go-cty/cty/function"
 	"github.com/zclconf/go-cty/cty/function/stdlib"

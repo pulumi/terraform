@@ -5,12 +5,12 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
+	"github.com/mitchellh/colorstring"
 	"github.com/pulumi/terraform/pkg/addrs"
 	"github.com/pulumi/terraform/pkg/configs/configschema"
 	"github.com/pulumi/terraform/pkg/lang/marks"
 	"github.com/pulumi/terraform/pkg/plans"
 	"github.com/pulumi/terraform/pkg/states"
-	"github.com/mitchellh/colorstring"
 	"github.com/zclconf/go-cty/cty"
 )
 

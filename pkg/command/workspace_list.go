@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/pulumi/terraform/pkg/tfdiags"
 	"github.com/posener/complete"
+	"github.com/pulumi/terraform/pkg/tfdiags"
 )
 
 type WorkspaceListCommand struct {
